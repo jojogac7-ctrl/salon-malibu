@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Salon Malibu | Est. 1995 · Village Market, Nairobi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Didact+Gothic&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Raleway',sans-serif;background:#faf7f2;color:#2c1f14;overflow-x:hidden}
+:root{
+  --ivory:#faf7f2;
+  --ivory2:#f5f0e8;
+  --sand:#e8ddd0;
+  --sand2:#d4c8b8;
+  --truffle:#8B6B47;
+  --truffle2:#a07d58;
+  --deep:#2c1f14;
+  --deep2:#3d2d1e;
+  --mid:#6b5040;
+  --muted:#9a8578;
+  --white:#ffffff;
+  --border:#e0d4c0;
+  --border2:#ede4d8;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;width:100%;z-index:100;
+  background:rgba(250,247,242,0.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  padding:0 5rem;height:76px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.nav-logo{display:flex;flex-direction:column;gap:2px}
+.logo-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:500;color:var(--deep);
+  letter-spacing:0.12em;text-transform:uppercase;
+}
+.logo-sub{
+  font-size:0.5rem;letter-spacing:0.35em;text-transform:uppercase;
+  color:var(--truffle);font-weight:400;
+}
+.nav-links{display:flex;gap:3rem;list-style:none}
+.nav-links a{
+  color:var(--muted);text-decoration:none;
+  font-size:0.65rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;
+  transition:color 0.3s;
+}
+.nav-links a:hover{color:var(--truffle)}
+.nav-book{
+  background:var(--deep);color:var(--ivory);
+  padding:0.65rem 2rem;font-size:0.6rem;font-weight:400;
+  letter-spacing:0.25em;text-transform:uppercase;
+  border:none;cursor:pointer;
+  transition:all 0.3s;font-family:'Raleway',sans-serif;text-decoration:none;display:inline-block;
+}
+.nav-book:hover{background:var(--truffle)}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;background:var(--ivory);
+  display:grid;grid-template-columns:1fr 1fr;
+  padding-top:76px;position:relative;overflow:hidden;
+}
+/* Subtle linen texture */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B6B47' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+}
+.hero-left{
+  padding:6rem 5rem;position:relative;z-index:2;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.hero-pre{
+  display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem;
+}
+.pre-line{width:40px;height:1px;background:var(--sand2)}
+.pre-txt{
+  font-size:0.58rem;letter-spacing:0.35em;text-transform:uppercase;
+  color:var(--muted);font-weight:400;
+}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.2rem,5.5vw,5.5rem);
+  line-height:1.02;color:var(--deep);font-weight:300;
+  margin-bottom:2rem;letter-spacing:0.01em;
+}
+.hero h1 em{
+  font-style:italic;font-weight:300;color:var(--truffle);
+  display:block;
+}
+.hero-sub{
+  font-size:0.78rem;color:var(--muted);
+  line-height:2.1;font-weight:300;max-width:380px;
+  margin-bottom:3rem;letter-spacing:0.06em;
+}
+.hero-actions{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center;margin-bottom:4rem}
+.btn{
+  display:inline-block;
+  font-size:0.6rem;font-weight:400;letter-spacing:0.25em;
+  text-transform:uppercase;border:none;cursor:pointer;
+  transition:all 0.3s;font-family:'Raleway',sans-serif;text-decoration:none;
+  padding:0.9rem 2.25rem;
+}
+.btn-deep{background:var(--deep);color:var(--ivory)}
+.btn-deep:hover{background:var(--truffle)}
+.btn-outline{background:transparent;color:var(--deep);border:1px solid var(--sand2)}
+.btn-outline:hover{border-color:var(--truffle);color:var(--truffle)}
+.btn-truffle{background:var(--truffle);color:#fff}
+.btn-truffle:hover{background:var(--truffle2)}
+.btn-outline-t{background:transparent;color:var(--truffle);border:1px solid var(--truffle)}
+.btn-outline-t:hover{background:var(--truffle);color:#fff}
+
+.hero-details{display:flex;flex-direction:column;gap:0.75rem}
+.hd-row{
+  display:flex;align-items:center;gap:1rem;
+  font-size:0.68rem;color:var(--muted);font-weight:300;letter-spacing:0.06em;
+}
+.hd-row a{color:var(--truffle);text-decoration:none;transition:color 0.2s;font-weight:400}
+.hd-row a:hover{color:var(--deep)}
+.hd-divider{width:1px;height:10px;background:var(--border)}
+
+.hero-right{
+  background:var(--ivory2);
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:5rem 4rem;border-left:1px solid var(--border);
+}
+.hero-img-block{width:100%;max-width:380px}
+.hib-top{
+  background:var(--deep);padding:3rem;
+  position:relative;overflow:hidden;margin-bottom:1px;
+}
+.hib-top::before{
+  content:'';position:absolute;bottom:-40px;right:-40px;
+  width:150px;height:150px;border-radius:50%;
+  background:rgba(139,107,71,0.12);
+}
+.hib-est{
+  font-size:0.52rem;letter-spacing:0.3em;text-transform:uppercase;
+  color:rgba(255,255,255,0.3);margin-bottom:0.5rem;
+}
+.hib-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:400;color:#fff;
+  letter-spacing:0.06em;margin-bottom:0.5rem;
+}
+.hib-desc{font-size:0.7rem;color:rgba(255,255,255,0.45);line-height:1.8;font-weight:300;margin-bottom:2rem;letter-spacing:0.04em}
+.hib-year-row{display:flex;align-items:flex-end;gap:0.5rem}
+.hib-year{
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem;font-weight:300;color:var(--truffle);line-height:1;
+}
+.hib-year-label{font-size:0.6rem;letter-spacing:0.18em;color:rgba(255,255,255,0.35);margin-bottom:0.75rem;text-transform:uppercase}
+.hib-mid{
+  background:var(--truffle);padding:1.25rem 1.75rem;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.hm-label{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
+.hm-val{font-size:0.72rem;font-weight:400;color:#fff;letter-spacing:0.06em}
+.hib-bottom{
+  background:var(--ivory);border:1px solid var(--border);border-top:none;
+  padding:1.5rem 1.75rem;
+}
+.brands-label{font-size:0.52rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem}
+.brands-row{display:flex;flex-wrap:wrap;gap:0.4rem}
+.brand-tag{
+  background:var(--ivory2);border:1px solid var(--border);
+  color:var(--mid);font-size:0.58rem;padding:0.2rem 0.65rem;
+  letter-spacing:0.1em;font-weight:400;
+}
+.hours-mini{margin-top:1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.hm-item{font-size:0.6rem;color:var(--muted);letter-spacing:0.04em}
+.hm-item strong{display:block;color:var(--deep);font-size:0.65rem;font-weight:500;margin-bottom:0.1rem}
+
+/* ── THIN DIVIDER BAR ── */
+.divider-bar{
+  background:var(--deep);padding:1.5rem 5rem;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:3px solid var(--truffle);
+}
+.db-item{
+  text-align:center;padding:0.5rem;
+  border-right:1px solid rgba(255,255,255,0.08);
+}
+.db-item:last-child{border-right:none}
+.db-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.2rem;font-weight:300;color:var(--truffle2);
+  display:block;line-height:1;
+}
+.db-label{
+  font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(255,255,255,0.35);margin-top:0.35rem;display:block;
+}
+
+/* ── SERVICES ── */
+.services{padding:8rem 5rem;background:var(--white)}
+.sec-pre{display:flex;align-items:center;gap:1rem;margin-bottom:0.6rem}
+.sp-line{width:32px;height:1px;background:var(--sand2)}
+.sp-txt{font-size:0.56rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,3.5vw,3.2rem);color:var(--deep);font-weight:300;
+  line-height:1.1;letter-spacing:0.03em;
+}
+.sec-title em{color:var(--truffle);font-style:italic}
+.sec-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:1rem}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border)}
+.svc-card{
+  padding:3rem 2.5rem;border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  cursor:pointer;transition:all 0.4s;position:relative;overflow:hidden;
+}
+.svc-card:nth-child(3n){border-right:none}
+.svc-card:nth-child(4),.svc-card:nth-child(5),.svc-card:nth-child(6){border-bottom:none}
+.svc-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:var(--deep);transform:translateY(100%);transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);z-index:0;
+}
+.svc-card:hover::before{transform:translateY(0)}
+.svc-card:hover .svc-num,.svc-card:hover .svc-name,.svc-card:hover .svc-desc{color:rgba(255,255,255,0.9);position:relative;z-index:1}
+.svc-card:hover .svc-price{background:rgba(139,107,71,0.2);color:var(--truffle2);border-color:rgba(139,107,71,0.2);position:relative;z-index:1}
+.svc-card:hover .svc-num{color:rgba(139,107,71,0.2)}
+.svc-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:300;color:var(--border);
+  line-height:1;margin-bottom:1.5rem;display:block;transition:color 0.4s;
+}
+.svc-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-weight:500;color:var(--deep);
+  margin-bottom:0.75rem;letter-spacing:0.04em;transition:color 0.4s;
+}
+.svc-desc{
+  font-size:0.72rem;color:var(--muted);line-height:1.9;
+  font-weight:300;margin-bottom:1.5rem;letter-spacing:0.03em;transition:color 0.4s;
+}
+.svc-price{
+  display:inline-block;border:1px solid var(--border);
+  color:var(--muted);font-size:0.58rem;font-weight:400;
+  padding:0.3rem 0.8rem;letter-spacing:0.15em;text-transform:uppercase;
+  transition:all 0.4s;
+}
+
+/* ── STYLISTS ── */
+.stylists{padding:8rem 5rem;background:var(--ivory)}
+.stylists-intro{font-size:0.75rem;color:var(--muted);font-weight:300;line-height:1.9;max-width:500px;margin-top:0.5rem;margin-bottom:4rem;letter-spacing:0.04em}
+.stylists-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border)}
+.stylist-card{
+  padding:2.5rem 1.5rem;text-align:center;
+  border-right:1px solid var(--border);
+  transition:background 0.3s;cursor:pointer;
+}
+.stylist-card:last-child{border-right:none}
+.stylist-card:hover{background:var(--deep)}
+.stylist-card:hover .st-name,.stylist-card:hover .st-price{color:#fff}
+.stylist-card:hover .st-role,.stylist-card:hover .st-price-label{color:rgba(255,255,255,0.4)}
+.stylist-card:hover .st-initial{background:rgba(139,107,71,0.15);color:var(--truffle2);border-color:rgba(139,107,71,0.2)}
+.st-initial{
+  width:60px;height:60px;border-radius:50%;
+  background:var(--ivory2);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1.25rem;
+  font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--truffle);
+  transition:all 0.3s;
+}
+.st-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;font-weight:500;color:var(--deep);
+  margin-bottom:0.3rem;letter-spacing:0.06em;transition:color 0.3s;
+}
+.st-role{
+  font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:1rem;font-weight:400;transition:color 0.3s;
+}
+.st-divider{width:24px;height:1px;background:var(--border);margin:0 auto 1rem}
+.st-price{font-size:0.68rem;color:var(--truffle);font-weight:400;transition:color 0.3s;letter-spacing:0.04em}
+.st-price-label{font-size:0.5rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-top:0.2rem;transition:color 0.3s}
+
+/* ── PRICE LIST ── */
+.pricelist{padding:8rem 5rem;background:var(--white)}
+.price-intro{font-size:0.75rem;color:var(--muted);font-weight:300;line-height:1.9;max-width:480px;margin-top:0.5rem;margin-bottom:3rem;letter-spacing:0.04em}
+.price-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:3rem}
+.ptab{
+  padding:0.85rem 2rem;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;
+  cursor:pointer;color:var(--muted);border-bottom:1px solid transparent;
+  margin-bottom:-1px;transition:all 0.25s;background:none;
+  border-top:none;border-left:none;border-right:none;font-family:'Raleway',sans-serif;font-weight:400;
+}
+.ptab.active{color:var(--deep);border-bottom-color:var(--truffle)}
+.ptab:hover{color:var(--truffle)}
+.price-panel{display:none}
+.price-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.price-col h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-weight:500;color:var(--deep);
+  margin-bottom:1.5rem;letter-spacing:0.06em;
+}
+.price-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0.85rem 0;border-bottom:1px solid var(--border2);
+}
+.price-row:last-child{border-bottom:none}
+.pr-name{color:var(--mid);font-weight:300;font-size:0.75rem;letter-spacing:0.04em}
+.pr-amt{color:var(--truffle);font-weight:400;font-size:0.75rem;letter-spacing:0.06em}
+.price-note{font-size:0.65rem;color:var(--muted);margin-top:2rem;font-style:italic;line-height:1.8;letter-spacing:0.03em;grid-column:span 2;padding-top:1.5rem;border-top:1px solid var(--border2)}
+
+/* ── TREATMENTS ── */
+.treatments{padding:8rem 5rem;background:var(--ivory)}
+.treats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.treat-card{
+  background:var(--white);border:1px solid var(--border);
+  padding:3rem 2.5rem;transition:all 0.35s;position:relative;overflow:hidden;
+}
+.treat-card::after{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--truffle);transform:scaleY(0);transition:transform 0.4s;transform-origin:bottom;
+}
+.treat-card:hover{box-shadow:0 20px 60px rgba(44,31,20,0.08);transform:translateY(-4px)}
+.treat-card:hover::after{transform:scaleY(1)}
+.treat-icon{font-size:1.5rem;margin-bottom:1.5rem;display:block;opacity:0.7}
+.treat-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-weight:500;color:var(--deep);margin-bottom:0.3rem;letter-spacing:0.04em;
+}
+.treat-brand{
+  font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--truffle);font-weight:400;margin-bottom:0.85rem;display:block;
+}
+.treat-desc{font-size:0.72rem;color:var(--muted);line-height:1.9;font-weight:300;letter-spacing:0.03em}
+
+/* ── ABOUT ── */
+.about{
+  padding:8rem 5rem;background:var(--white);
+  display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;
+}
+.about-left{}
+.about-portrait{
+  background:var(--ivory2);border:1px solid var(--border);
+  padding:3.5rem;position:relative;
+}
+.ap-year{
+  font-family:'Cormorant Garamond',serif;
+  font-size:8rem;font-weight:300;color:var(--sand);
+  line-height:1;margin-bottom:-1.5rem;display:block;letter-spacing:-0.02em;
+}
+.ap-quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-style:italic;font-weight:300;
+  color:var(--deep);line-height:1.65;
+  border-left:2px solid var(--truffle);padding-left:1.5rem;
+  margin-bottom:1.75rem;
+}
+.ap-cite{
+  font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--muted);font-weight:400;
+}
+.ap-charity{
+  margin-top:1.75rem;background:var(--ivory);
+  border:1px solid var(--border);padding:1.25rem 1.5rem;
+  display:flex;gap:1rem;align-items:flex-start;
+}
+.ac-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.1rem}
+.ac-title{font-size:0.68rem;font-weight:500;color:var(--deep);margin-bottom:0.25rem;letter-spacing:0.06em}
+.ac-desc{font-size:0.68rem;color:var(--muted);line-height:1.7;font-weight:300}
+.about-right .sec-title{margin-top:0.5rem;margin-bottom:1.75rem}
+.about-right p{font-size:0.75rem;line-height:2;color:var(--mid);font-weight:300;margin-bottom:1rem;letter-spacing:0.04em}
+.about-vals{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);margin:2rem 0}
+.av{padding:1.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.av:nth-child(2){border-right:none}
+.av:nth-child(3){border-bottom:none}
+.av:nth-child(4){border-right:none;border-bottom:none}
+.av-title{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--truffle);font-weight:500;margin-bottom:0.4rem}
+.av-desc{font-size:0.68rem;color:var(--muted);font-weight:300;line-height:1.65}
+
+/* ── BOOKING ── */
+.booking{
+  padding:8rem 5rem;background:var(--ivory);
+  display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;
+}
+.booking-left .sec-title{margin-top:0.5rem;margin-bottom:1.25rem}
+.booking-left p{font-size:0.75rem;color:var(--mid);line-height:2;font-weight:300;margin-bottom:2rem;letter-spacing:0.04em}
+.contact-list{display:flex;flex-direction:column}
+.cl{display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 0;border-bottom:1px solid var(--border)}
+.cl:first-child{border-top:1px solid var(--border)}
+.cl-icon{width:36px;height:36px;background:var(--ivory2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0}
+.cl-label{font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:400;margin-bottom:0.25rem}
+.cl-val{font-size:0.78rem;color:var(--deep);font-weight:300;letter-spacing:0.04em}
+.cl-val a{color:var(--truffle);text-decoration:none;transition:color 0.2s}
+.cl-val a:hover{color:var(--deep)}
+
+.booking-form{background:var(--white);border:1px solid var(--border);padding:3.5rem}
+.form-head{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.8rem;font-weight:300;color:var(--deep);
+  margin-bottom:0.3rem;letter-spacing:0.06em;
+}
+.form-sub{font-size:0.62rem;color:var(--muted);margin-bottom:2.5rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:400}
+.fg{margin-bottom:1.25rem}
+.fg label{
+  display:block;font-size:0.52rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--muted);font-weight:400;margin-bottom:0.5rem;
+}
+.fg input,.fg select,.fg textarea{
+  width:100%;background:var(--ivory);border:none;border-bottom:1px solid var(--border);
+  color:var(--deep);padding:0.75rem 0;
+  font-size:0.78rem;font-family:'Raleway',sans-serif;
+  outline:none;transition:border-color 0.3s;letter-spacing:0.04em;
+  border-radius:0;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-bottom-color:var(--truffle);background:transparent}
+.fg textarea{resize:vertical;min-height:90px}
+.fg-2{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.submit-btn{
+  width:100%;background:var(--deep);color:var(--ivory);border:none;
+  padding:1.1rem;font-size:0.6rem;font-weight:400;
+  letter-spacing:0.28em;text-transform:uppercase;
+  cursor:pointer;font-family:'Raleway',sans-serif;transition:all 0.3s;margin-top:0.5rem;
+}
+.submit-btn:hover{background:var(--truffle)}
+.form-note{font-size:0.6rem;color:var(--muted);margin-top:1rem;text-align:center;letter-spacing:0.08em;line-height:1.7;font-weight:300}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--deep);color:rgba(255,255,255,0.5);
+  padding:6rem 5rem 3rem;
+}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;
+  padding-bottom:4rem;margin-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.fb-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:300;color:#fff;display:block;
+  letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;
+}
+.fb-sub{font-size:0.48rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--truffle2);font-weight:400;margin-bottom:1.5rem;display:block}
+.fb-desc{font-size:0.7rem;color:rgba(255,255,255,0.28);line-height:1.95;font-weight:300;max-width:240px;margin-bottom:1.75rem;letter-spacing:0.04em}
+.fb-soc{display:flex;gap:0.5rem}
+.fs-btn{
+  width:32px;height:32px;border:1px solid rgba(255,255,255,0.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.65rem;color:rgba(255,255,255,0.3);text-decoration:none;
+  transition:all 0.25s;letter-spacing:0.05em;
+}
+.fs-btn:hover{border-color:var(--truffle2);color:var(--truffle2)}
+.fc h4{font-size:0.52rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--truffle2);margin-bottom:1.5rem;font-weight:400}
+.fc ul{list-style:none}
+.fc li{font-size:0.7rem;color:rgba(255,255,255,0.28);padding:0.32rem 0;font-weight:300;letter-spacing:0.04em}
+.fc a{color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.25s}
+.fc a:hover{color:rgba(255,255,255,0.7)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:0.6rem;color:rgba(255,255,255,0.18);letter-spacing:0.1em}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.75s ease,transform 0.75s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  nav{padding:0 2rem}.nav-links{display:none}
+  .hero{grid-template-columns:1fr}.hero-right{display:none}
+  .hero-left{padding:5rem 2rem}
+  .divider-bar{grid-template-columns:repeat(2,1fr);padding:1.5rem 2rem}
+  .db-item:nth-child(2){border-right:none}
+  .services{padding:5rem 2rem}.services-grid{grid-template-columns:1fr 1fr}
+  .svc-card:nth-child(2){border-right:none}.svc-card:nth-child(3){border-right:1px solid var(--border)}
+  .svc-card:nth-child(4){border-bottom:1px solid var(--border)}.svc-card:nth-child(5){border-bottom:1px solid var(--border)}
+  .stylists{padding:5rem 2rem}.stylists-grid{grid-template-columns:repeat(3,1fr)}
+  .stylist-card:nth-child(3){border-right:none}
+  .pricelist{padding:5rem 2rem}.price-panel.active{grid-template-columns:1fr}
+  .price-note{grid-column:span 1}
+  .treatments{padding:5rem 2rem}.treats-grid{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:1fr;padding:5rem 2rem;gap:3rem}
+  .booking{grid-template-columns:1fr;padding:5rem 2rem;gap:3rem}
+  footer{padding:4rem 2rem 2rem}.footer-top{grid-template-columns:1fr 1fr;gap:2.5rem}
+}
+@media(max-width:600px){
+  .services-grid{grid-template-columns:1fr}
+  .stylists-grid{grid-template-columns:repeat(2,1fr)}
+  .treats-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}.fg-2{grid-template-columns:1fr}
+  .about-vals{grid-template-columns:1fr}
+}
+
+/* ── WATERMARK SYSTEM ── */
+.wm-fixed{
+  position:fixed;inset:0;z-index:99999;
+  pointer-events:none;overflow:hidden;
+}
+.wm-grid{
+  position:absolute;inset:-50%;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:0;
+  transform:rotate(-30deg);
+  width:200%;height:200%;
+}
+.wm-cell{
+  padding:2.5rem 1rem;text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:0.4rem;
+}
+.wm-text{
+  font-family:'Raleway',sans-serif;
+  font-size:0.62rem;font-weight:600;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(139,107,71,0.13);white-space:nowrap;line-height:1.8;
+}
+.wm-text.bold{font-size:0.7rem;color:rgba(44,31,20,0.1);letter-spacing:0.15em}
+/* top demo banner */
+.demo-banner{
+  position:fixed;bottom:0;left:0;right:0;z-index:999999;
+  background:rgba(44,31,20,0.96);
+  backdrop-filter:blur(10px);
+  padding:0.85rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:2px solid #8B6B47;
+  pointer-events:all;
+}
+.db-left{display:flex;align-items:center;gap:1.25rem}
+.db-dot{width:8px;height:8px;border-radius:50%;background:#8B6B47;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.db-text{font-family:'Raleway',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
+.db-text span{color:#a07d58;font-weight:600}
+.db-right{font-family:'Raleway',sans-serif;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+/* corner stamp */
+.corner-stamp{
+  position:fixed;top:80px;right:0;z-index:999998;
+  background:rgba(139,107,71,0.9);
+  color:#fff;
+  padding:0.5rem 1.25rem 0.5rem 1.5rem;
+  font-family:'Raleway',sans-serif;
+  font-size:0.55rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;
+  pointer-events:none;
+  clip-path:polygon(8% 0%,100% 0%,100% 100%,8% 100%,0% 50%);
+}
+</style>
+</head>
+<body>
+
+<!-- WATERMARK OVERLAY -->
+<div class="wm-fixed" id="watermark"><div class="wm-grid" id="wm-grid"></div></div>
+<div class="corner-stamp">Demo &middot; Unpaid</div>
+<div class="demo-banner"><div class="db-left"><div class="db-dot"></div><div class="db-text">Demo Preview &nbsp;&middot;&nbsp; <span>Salon Malibu</span> &nbsp;&middot;&nbsp; Not yet live &nbsp;&middot;&nbsp; Property of [Your Name]</div></div><div class="db-right">Not for redistribution &nbsp;&middot;&nbsp; &copy; 2025</div></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <span class="logo-name">Salon Malibu</span>
+    <span class="logo-sub">Est. 1995 · Village Market, Nairobi</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricelist">Pricing</a></li>
+    <li><a href="#treatments">Treatments</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#booking">Contact</a></li>
+  </ul>
+  <a href="#booking" class="nav-book">Book Appointment</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-pre"><div class="pre-line"></div><span class="pre-txt">Village Market, Gigiri · Nairobi</span></div>
+    <h1>
+      Nairobi's<br>
+      Finest<br>
+      <em>Salon.</em>
+    </h1>
+    <p class="hero-sub">Thirty years of refined hair and beauty at the heart of Village Market. Expert stylists, world-class products, and a sanctuary of calm in Gigiri.</p>
+    <div class="hero-actions">
+      <a href="#booking" class="btn btn-deep">Book Appointment</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+    <div class="hero-details">
+      <div class="hd-row">📍 2nd Floor, Next to Tamambo, Village Market, Gigiri</div>
+      <div class="hd-row">
+        📞 <a href="tel:+254725504190">+254 725 504 190</a>
+        <div class="hd-divider"></div>
+        <a href="tel:+254733624552">+254 733 624 552</a>
+      </div>
+      <div class="hd-row">🕐 Tue – Fri &nbsp;08:30 – 18:30 &nbsp;|&nbsp; Sat &nbsp;08:00 – 16:30 &nbsp;|&nbsp; Closed Sun & Mon</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-block">
+      <div class="hib-top">
+        <div class="hib-est">Established in Nairobi</div>
+        <div class="hib-title">Salon Malibu</div>
+        <div class="hib-desc">An appointment-only sanctuary. Our international team of stylists brings decades of expertise and the world's finest products to every visit.</div>
+        <div class="hib-year-row">
+          <div class="hib-year">30</div>
+          <div class="hib-year-label">Years of<br>Excellence</div>
+        </div>
+      </div>
+      <div class="hib-mid">
+        <div class="hm-label">Location</div>
+        <div class="hm-val">Village Market · Gigiri</div>
+      </div>
+      <div class="hib-bottom">
+        <div class="brands-label">Premium Product Partners</div>
+        <div class="brands-row">
+          <span class="brand-tag">Kérastase</span>
+          <span class="brand-tag">Redken</span>
+          <span class="brand-tag">Wella</span>
+          <span class="brand-tag">L'Oréal</span>
+          <span class="brand-tag">Olaplex</span>
+          <span class="brand-tag">René Guinot</span>
+          <span class="brand-tag">Sebastian</span>
+        </div>
+        <div class="hours-mini">
+          <div class="hm-item"><strong>Tue – Fri</strong>08:30 – 18:30</div>
+          <div class="hm-item"><strong>Saturday</strong>08:00 – 16:30</div>
+          <div class="hm-item"><strong>Sunday</strong>Closed</div>
+          <div class="hm-item"><strong>Monday</strong>Closed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="divider-bar">
+  <div class="db-item"><span class="db-num" id="s1">0</span><span class="db-label">Years of Excellence</span></div>
+  <div class="db-item"><span class="db-num">96%</span><span class="db-label">Client Recommendation</span></div>
+  <div class="db-item"><span class="db-num">5</span><span class="db-label">International Stylists</span></div>
+  <div class="db-item"><span class="db-num">7+</span><span class="db-label">Premium Brand Partners</span></div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="sec-header fade-up">
+    <div>
+      <div class="sec-pre"><div class="sp-line"></div><span class="sp-txt">What We Offer</span></div>
+      <div class="sec-title">Our <em>Services</em></div>
+    </div>
+    <a href="#pricelist" class="btn btn-outline-t" style="font-size:0.58rem;padding:0.75rem 1.75rem">View Full Price List →</a>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card fade-up">
+      <span class="svc-num">01</span>
+      <div class="svc-name">Cuts & Styling</div>
+      <div class="svc-desc">Precision cuts, blowdrys and restyling from our internationally trained team. Every cut is tailored to your face shape and personal style.</div>
+      <span class="svc-price">From Ksh 2,000</span>
+    </div>
+    <div class="svc-card fade-up">
+      <span class="svc-num">02</span>
+      <div class="svc-name">Colour & Highlights</div>
+      <div class="svc-desc">Full colour, highlights, balayage, toning and 3D colour using Wella, Redken and L'Oréal for vibrant, lasting and luminous results.</div>
+      <span class="svc-price">From Ksh 4,500</span>
+    </div>
+    <div class="svc-card fade-up">
+      <span class="svc-num">03</span>
+      <div class="svc-name">Keratin & Treatments</div>
+      <div class="svc-desc">Keratin smoothing, Olaplex bond repair, deep conditioning and Kérastase scalp rituals — transformative results in a single visit.</div>
+      <span class="svc-price">From Ksh 6,000</span>
+    </div>
+    <div class="svc-card fade-up">
+      <span class="svc-num">04</span>
+      <div class="svc-name">HydraFacial & Skincare</div>
+      <div class="svc-desc">Revitalising HydraFacial and timeless René Guinot facials — clinical skincare solutions for instantly glowing, healthy skin.</div>
+      <span class="svc-price">From Ksh 6,500</span>
+    </div>
+    <div class="svc-card fade-up">
+      <span class="svc-num">05</span>
+      <div class="svc-name">Laser Hair Removal</div>
+      <div class="svc-desc">Alma Soprano Titanium — the gold standard in pain-free, permanent hair reduction. Effective on all skin types including African skin tones.</div>
+      <span class="svc-price">From Ksh 5,000</span>
+    </div>
+    <div class="svc-card fade-up">
+      <span class="svc-num">06</span>
+      <div class="svc-name">Nails & Manicure</div>
+      <div class="svc-desc">Classic manicures, pedicures, gel nails and natural nail care. Hands and feet treated with the same precision as every other service.</div>
+      <span class="svc-price">From Ksh 2,000</span>
+    </div>
+  </div>
+</section>
+
+<!-- STYLISTS -->
+<section class="stylists">
+  <div class="sec-pre fade-up"><div class="sp-line"></div><span class="sp-txt">Our Team</span></div>
+  <div class="sec-title fade-up" style="margin-top:0.5rem">Meet Our <em>Stylists</em></div>
+  <p class="stylists-intro">Our international team brings decades of combined expertise. Every stylist is individually trained in the latest techniques — and dedicated to making every visit exceptional. Pricing reflects experience and seniority.</p>
+  <div class="stylists-grid">
+    <div class="stylist-card fade-up">
+      <div class="st-initial">M</div>
+      <div class="st-name">Mark</div>
+      <div class="st-role">Master Stylist</div>
+      <div class="st-divider"></div>
+      <div class="st-price">From Ksh 6,200</div>
+      <div class="st-price-label">Senior Rate</div>
+    </div>
+    <div class="stylist-card fade-up">
+      <div class="st-initial">D</div>
+      <div class="st-name">Debbie</div>
+      <div class="st-role">Senior Stylist</div>
+      <div class="st-divider"></div>
+      <div class="st-price">From Ksh 5,500</div>
+      <div class="st-price-label">Senior Rate</div>
+    </div>
+    <div class="stylist-card fade-up">
+      <div class="st-initial">ME</div>
+      <div class="st-name">Marie-Eve</div>
+      <div class="st-role">Senior Stylist</div>
+      <div class="st-divider"></div>
+      <div class="st-price">From Ksh 4,600</div>
+      <div class="st-price-label">Senior Rate</div>
+    </div>
+    <div class="stylist-card fade-up">
+      <div class="st-initial">K</div>
+      <div class="st-name">Kavita</div>
+      <div class="st-role">Stylist</div>
+      <div class="st-divider"></div>
+      <div class="st-price">From Ksh 4,000</div>
+      <div class="st-price-label">Standard Rate</div>
+    </div>
+    <div class="stylist-card fade-up">
+      <div class="st-initial">R</div>
+      <div class="st-name">Robert</div>
+      <div class="st-role">Stylist</div>
+      <div class="st-divider"></div>
+      <div class="st-price">From Ksh 4,000</div>
+      <div class="st-price-label">Standard Rate</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE LIST -->
+<section class="pricelist" id="pricelist">
+  <div class="sec-pre fade-up"><div class="sp-line"></div><span class="sp-txt">Transparent Pricing</span></div>
+  <div class="sec-title fade-up" style="margin-top:0.5rem">Service <em>Price List</em></div>
+  <p class="price-intro">All prices in Kenyan Shillings. Rates vary by stylist seniority. Please contact us for an exact quote on colour corrections or specialist services.</p>
+  <div class="price-tabs fade-up">
+    <button class="ptab active" onclick="showPrice('cuts',this)">Cuts & Blowdry</button>
+    <button class="ptab" onclick="showPrice('colour',this)">Colour</button>
+    <button class="ptab" onclick="showPrice('treat',this)">Treatments</button>
+    <button class="ptab" onclick="showPrice('beauty',this)">Beauty & Nails</button>
+  </div>
+  <div id="cuts" class="price-panel active fade-up">
+    <div class="price-col">
+      <h4>Cuts</h4>
+      <div class="price-row"><span class="pr-name">Cut & Finish</span><span class="pr-amt">Ksh 4,000 – 6,200</span></div>
+      <div class="price-row"><span class="pr-name">Wet Cut</span><span class="pr-amt">Ksh 3,500 – 5,800</span></div>
+      <div class="price-row"><span class="pr-name">Restyle</span><span class="pr-amt">Ksh 4,500 – 6,500</span></div>
+      <div class="price-row"><span class="pr-name">Gents Cut</span><span class="pr-amt">Ksh 3,000 – 4,500</span></div>
+    </div>
+    <div class="price-col">
+      <h4>Blowdry & Finishing</h4>
+      <div class="price-row"><span class="pr-name">Blowdry (Short)</span><span class="pr-amt">Ksh 2,000 – 2,900</span></div>
+      <div class="price-row"><span class="pr-name">Blowdry (Medium)</span><span class="pr-amt">Ksh 2,200 – 3,100</span></div>
+      <div class="price-row"><span class="pr-name">Blowdry (Long)</span><span class="pr-amt">Ksh 2,500 – 3,500</span></div>
+      <div class="price-row"><span class="pr-name">Tonging / Curling</span><span class="pr-amt">Ksh 2,800 – 4,000</span></div>
+      <p class="price-note">Rates vary by stylist seniority. Book with a specific stylist or let us match you with the best available for your service.</p>
+    </div>
+  </div>
+  <div id="colour" class="price-panel fade-up">
+    <div class="price-col">
+      <h4>Colour</h4>
+      <div class="price-row"><span class="pr-name">Full Head Colour</span><span class="pr-amt">Ksh 5,500 – 9,500</span></div>
+      <div class="price-row"><span class="pr-name">Root Retouch</span><span class="pr-amt">Ksh 4,500 – 7,500</span></div>
+      <div class="price-row"><span class="pr-name">Half Head Highlights</span><span class="pr-amt">Ksh 5,000 – 8,500</span></div>
+      <div class="price-row"><span class="pr-name">Full Head Highlights</span><span class="pr-amt">Ksh 7,000 – 12,000</span></div>
+    </div>
+    <div class="price-col">
+      <h4>Specialist Colour</h4>
+      <div class="price-row"><span class="pr-name">Balayage</span><span class="pr-amt">Ksh 9,000 – 15,000</span></div>
+      <div class="price-row"><span class="pr-name">3D Colour</span><span class="pr-amt">Ksh 8,500 – 14,000</span></div>
+      <div class="price-row"><span class="pr-name">Toning / Gloss</span><span class="pr-amt">Ksh 3,500 – 5,500</span></div>
+      <div class="price-row"><span class="pr-name">Colour Correction</span><span class="pr-amt">On consultation</span></div>
+      <p class="price-note">All colour services use Wella, Redken and L'Oréal Professional. Colour correction priced on individual consultation — please contact us in advance.</p>
+    </div>
+  </div>
+  <div id="treat" class="price-panel fade-up">
+    <div class="price-col">
+      <h4>Hair Treatments</h4>
+      <div class="price-row"><span class="pr-name">Keratin Treatment</span><span class="pr-amt">Ksh 9,000 – 15,000</span></div>
+      <div class="price-row"><span class="pr-name">Olaplex Treatment</span><span class="pr-amt">Ksh 4,500 – 7,500</span></div>
+      <div class="price-row"><span class="pr-name">Deep Conditioning</span><span class="pr-amt">Ksh 3,000 – 5,000</span></div>
+      <div class="price-row"><span class="pr-name">Scalp Treatment</span><span class="pr-amt">Ksh 3,500 – 5,500</span></div>
+    </div>
+    <div class="price-col">
+      <h4>Skin & Laser</h4>
+      <div class="price-row"><span class="pr-name">HydraFacial</span><span class="pr-amt">From Ksh 7,500</span></div>
+      <div class="price-row"><span class="pr-name">Guinot Facial</span><span class="pr-amt">From Ksh 6,500</span></div>
+      <div class="price-row"><span class="pr-name">Laser Hair Removal</span><span class="pr-amt">From Ksh 5,000</span></div>
+      <div class="price-row"><span class="pr-name">Waxing</span><span class="pr-amt">From Ksh 1,500</span></div>
+      <p class="price-note">Alma Soprano Titanium is the world's most advanced pain-free laser system. Effective on all skin types including darker skin tones.</p>
+    </div>
+  </div>
+  <div id="beauty" class="price-panel fade-up">
+    <div class="price-col">
+      <h4>Nails</h4>
+      <div class="price-row"><span class="pr-name">Manicure</span><span class="pr-amt">From Ksh 2,000</span></div>
+      <div class="price-row"><span class="pr-name">Pedicure</span><span class="pr-amt">From Ksh 2,500</span></div>
+      <div class="price-row"><span class="pr-name">Gel Nails</span><span class="pr-amt">From Ksh 3,500</span></div>
+      <div class="price-row"><span class="pr-name">Nail Art</span><span class="pr-amt">On consultation</span></div>
+    </div>
+    <div class="price-col">
+      <h4>Natural Hair</h4>
+      <div class="price-row"><span class="pr-name">Braids & Crotchet</span><span class="pr-amt">From Ksh 2,500</span></div>
+      <div class="price-row"><span class="pr-name">Dreadlocks</span><span class="pr-amt">From Ksh 3,000</span></div>
+      <div class="price-row"><span class="pr-name">Faux Locs</span><span class="pr-amt">From Ksh 3,500</span></div>
+      <div class="price-row"><span class="pr-name">Gift Vouchers</span><span class="pr-amt">Available on request</span></div>
+      <p class="price-note">Gift vouchers available — the perfect gift. Contact us to arrange a bespoke voucher for any value or service.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="treatments" id="treatments">
+  <div class="sec-pre fade-up"><div class="sp-line"></div><span class="sp-txt">Advanced Beauty</span></div>
+  <div class="sec-title fade-up" style="margin-top:0.5rem">Signature <em>Treatments</em></div>
+  <div class="treats-grid">
+    <div class="treat-card fade-up">
+      <span class="treat-icon">💎</span>
+      <div class="treat-name">HydraFacial</div>
+      <span class="treat-brand">Advanced Skincare Technology</span>
+      <div class="treat-desc">The world's leading skin resurfacing treatment. Simultaneously cleanses, exfoliates, extracts and hydrates for instantly glowing skin with zero downtime.</div>
+    </div>
+    <div class="treat-card fade-up">
+      <span class="treat-icon">✦</span>
+      <div class="treat-name">René Guinot Facials</div>
+      <span class="treat-brand">René Guinot · Paris</span>
+      <div class="treat-desc">Timeless French skincare rituals from the world-renowned René Guinot Institute. Personalised treatments using the finest European formulations for radiant, ageless skin.</div>
+    </div>
+    <div class="treat-card fade-up">
+      <span class="treat-icon">⚡</span>
+      <div class="treat-name">Alma Soprano Laser</div>
+      <span class="treat-brand">Titanium Technology</span>
+      <div class="treat-desc">The gold standard in laser hair removal. Pain-free, effective on all skin types including darker African skin tones. Permanent, clinically proven results.</div>
+    </div>
+    <div class="treat-card fade-up">
+      <span class="treat-icon">○</span>
+      <div class="treat-name">Olaplex Hair Repair</div>
+      <span class="treat-brand">Olaplex · Professional</span>
+      <div class="treat-desc">The revolutionary bond-building treatment that repairs damaged, over-processed and colour-treated hair from within. Visibly stronger, healthier hair from a single session.</div>
+    </div>
+    <div class="treat-card fade-up">
+      <span class="treat-icon">◇</span>
+      <div class="treat-name">Keratin Smoothing</div>
+      <span class="treat-brand">Professional Formula</span>
+      <div class="treat-desc">Eliminate frizz and transform your hair with our professional keratin treatment. Smooth, shiny and manageable hair for up to four months.</div>
+    </div>
+    <div class="treat-card fade-up">
+      <span class="treat-icon">⬡</span>
+      <div class="treat-name">Kérastase Rituals</div>
+      <span class="treat-brand">Kérastase · Paris</span>
+      <div class="treat-desc">Luxurious in-salon Kérastase hair treatment rituals — deeply nourishing masques that restore vitality, shine and strength to every hair type from within.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-left fade-up">
+    <div class="about-portrait">
+      <span class="ap-year">1995</span>
+      <div class="ap-quote">"Every visit to Salon Malibu is a moment of calm in a busy city. We have built our reputation on one thing — exceptional results, every time."</div>
+      <div class="ap-cite">The Salon Malibu Team · Village Market, Gigiri</div>
+      <div class="ap-charity">
+        <div class="ac-icon">💛</div>
+        <div>
+          <div class="ac-title">Faraja Cancer Support</div>
+          <div class="ac-desc">Since 2014, Salon Malibu has hosted an annual fundraising coffee morning supporting breast cancer awareness — raising over Ksh 77,400 for Faraja Cancer Support.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-right fade-up">
+    <div class="sec-pre"><div class="sp-line"></div><span class="sp-txt">Our Story</span></div>
+    <div class="sec-title" style="margin-top:0.5rem">Thirty Years of <em>Refinement.</em></div>
+    <p>Established in 1995, Salon Malibu has been Nairobi's most distinguished hair and beauty destination for three decades. Located at Village Market in Gigiri — home to the United Nations and the diplomatic community — we have earned a reputation built on exceptional quality and unwavering standards.</p>
+    <p>Our international team of stylists combines decades of expertise with the world's finest product partners — Kérastase, Redken, Wella, René Guinot and Olaplex — to deliver results that are consistently, quietly outstanding.</p>
+    <p>We are appointment-only. Every visit is given the time, care and undivided attention it deserves.</p>
+    <div class="about-vals">
+      <div class="av"><div class="av-title">Precision</div><div class="av-desc">Every cut, colour and treatment is executed with exacting detail and care.</div></div>
+      <div class="av"><div class="av-title">Excellence</div><div class="av-desc">Thirty years of consistent quality and 96% client recommendation rate.</div></div>
+      <div class="av"><div class="av-title">Expertise</div><div class="av-desc">An internationally trained team with decades of combined experience.</div></div>
+      <div class="av"><div class="av-title">Discretion</div><div class="av-desc">A calm, private and sophisticated environment for our discerning clientele.</div></div>
+    </div>
+    <a href="#booking" class="btn btn-deep">Book an Appointment</a>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="booking-left fade-up">
+    <div class="sec-pre"><div class="sp-line"></div><span class="sp-txt">Appointments</span></div>
+    <div class="sec-title">Book Your <em>Visit</em></div>
+    <p>Salon Malibu is appointment-only. We recommend booking at least 48 hours in advance, particularly for colour, keratin and specialist treatment services. Gift vouchers available on request.</p>
+    <div class="contact-list">
+      <div class="cl"><div class="cl-icon">📞</div><div><div class="cl-label">Mobile</div><div class="cl-val"><a href="tel:+254725504190">+254 725 504 190</a> &nbsp;·&nbsp; <a href="tel:+254733624552">+254 733 624 552</a></div></div></div>
+      <div class="cl"><div class="cl-icon">☎️</div><div><div class="cl-label">Landline</div><div class="cl-val"><a href="tel:0207122470">020 712 2470</a> &nbsp;·&nbsp; <a href="tel:0207122471">020 712 2471</a></div></div></div>
+      <div class="cl"><div class="cl-icon">📍</div><div><div class="cl-label">Location</div><div class="cl-val">2nd Floor, Next to Tamambo, Village Market, Gigiri, Nairobi</div></div></div>
+      <div class="cl"><div class="cl-icon">🕐</div><div><div class="cl-label">Hours</div><div class="cl-val">Tue – Fri 08:30 – 18:30 &nbsp;|&nbsp; Sat 08:00 – 16:30<br>Closed Sunday & Monday</div></div></div>
+    </div>
+  </div>
+  <div class="booking-form fade-up">
+    <div class="form-head">Book an Appointment</div>
+    <div class="form-sub">We confirm within 24 hours</div>
+    <div class="fg-2">
+      <div class="fg"><label>Full Name</label><input type="text" placeholder="Your name"/></div>
+      <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+254 7XX XXX XXX"/></div>
+    </div>
+    <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"/></div>
+    <div class="fg"><label>Preferred Stylist</label>
+      <select>
+        <option disabled selected>Select stylist (optional)</option>
+        <option>Mark — Master Stylist</option>
+        <option>Debbie — Senior Stylist</option>
+        <option>Marie-Eve — Senior Stylist</option>
+        <option>Kavita — Stylist</option>
+        <option>Robert — Stylist</option>
+        <option>No preference — first available</option>
+      </select>
+    </div>
+    <div class="fg"><label>Service Required</label>
+      <select>
+        <option disabled selected>Select service</option>
+        <option>Cut & Finish</option>
+        <option>Colour / Highlights</option>
+        <option>Balayage / 3D Colour</option>
+        <option>Keratin Treatment</option>
+        <option>Olaplex Treatment</option>
+        <option>HydraFacial</option>
+        <option>Guinot Facial</option>
+        <option>Laser Hair Removal</option>
+        <option>Nails — Manicure / Pedicure</option>
+        <option>Natural Hair — Braids / Locs</option>
+        <option>Gift Voucher Enquiry</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="fg-2">
+      <div class="fg"><label>Preferred Date</label><input type="date"/></div>
+      <div class="fg"><label>Preferred Time</label><input type="time" min="08:00" max="18:30"/></div>
+    </div>
+    <button class="submit-btn">Request Appointment</button>
+    <p class="form-note">Appointment-only salon · 48hr advance booking recommended<br>Gift vouchers available on request</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="fb-name">Salon Malibu</span>
+      <span class="fb-sub">Est. 1995 · Village Market, Gigiri · Nairobi, Kenya</span>
+      <p class="fb-desc">Nairobi's most distinguished hair and beauty salon. Thirty years of refined excellence in the heart of Village Market.</p>
+      <div class="fb-soc">
+        <a class="fs-btn" href="https://www.instagram.com/salonmalibu/" target="_blank">ig</a>
+        <a class="fs-btn" href="https://www.facebook.com/salonmalibuke/" target="_blank">fb</a>
+      </div>
+    </div>
+    <div class="fc"><h4>Services</h4><ul>
+      <li>Cuts & Styling</li><li>Colour & Highlights</li>
+      <li>Keratin & Olaplex</li><li>HydraFacial</li>
+      <li>Guinot Facials</li><li>Alma Soprano Laser</li>
+      <li>Nails & Manicure</li>
+    </ul></div>
+    <div class="fc"><h4>Our Stylists</h4><ul>
+      <li>Mark</li><li>Debbie</li>
+      <li>Marie-Eve</li><li>Kavita</li><li>Robert</li>
+    </ul></div>
+    <div class="fc"><h4>Visit Us</h4><ul>
+      <li>2nd Floor, Next to Tamambo</li>
+      <li>Village Market, Gigiri, Nairobi</li>
+      <li><a href="tel:+254725504190">+254 725 504 190</a></li>
+      <li><a href="tel:+254733624552">+254 733 624 552</a></li>
+      <li>Tue–Fri: 08:30 – 18:30</li>
+      <li>Sat: 08:00 – 16:30</li>
+      <li>Closed Sun & Mon</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Salon Malibu. All Rights Reserved. · Village Market, Gigiri, Nairobi</p>
+    <p>Est. 1995 · Nairobi's Premier Hair & Beauty Salon</p>
+  </div>
+</footer>
+
+<script>
+function animCount(el,target,suffix,dur){
+  let v=0,step=target/60;
+  let t=setInterval(()=>{v+=step;if(v>=target){v=target;clearInterval(t)}el.textContent=Math.round(v)+(suffix||'');},dur/60);
+}
+let done=false;
+new IntersectionObserver(e=>{
+  if(e[0].isIntersecting&&!done){done=true;animCount(document.getElementById('s1'),30,'',1200);}
+},{threshold:0.3}).observe(document.querySelector('.divider-bar'));
+
+function showPrice(id,btn){
+  document.querySelectorAll('.price-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:0.07,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>ro.observe(el));
+
+// Generate watermark grid
+(function(){
+  const grid = document.getElementById('wm-grid');
+  const lines = [
+    'DEMO ONLY',
+    'Salon Malibu',
+    'Not For Use',
+    '© [Your Name]',
+    'UNPAID',
+    'Demo Preview',
+  ];
+  let html = '';
+  for(let i=0;i<120;i++){
+    const line1 = lines[i%lines.length];
+    const line2 = lines[(i+2)%lines.length];
+    html += `<div class="wm-cell">
+      <div class="wm-text bold">${line1}</div>
+      <div class="wm-text">${line2}</div>
+    </div>`;
+  }
+  grid.innerHTML = html;
+  // Add bottom padding so content isn't hidden behind banner
+  document.body.style.paddingBottom = '56px';
+})();
+</script>
+</body>
+</html>
